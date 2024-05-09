@@ -1,0 +1,26 @@
+[ req ]
+distinguished_name=dname
+req_extensions=rel_cert_ext
+prompt=no
+
+[ dname ]
+commonName=Related Certificate Test
+countryName=US
+stateOrProvinceName=MD
+localityName=Annapolis Junction
+organizationName=CCSS
+organizationalUnitName=C54
+
+[ rel_cert_ext ]
+basicConstraints=CA:FALSE
+keyUsage=digitalSignature, nonRepudiation
+extendedKeyUsage=serverAuth, clientAuth
+subjectKeyIdentifier=hash
+relatedCertRequest=@rel_cert
+
+[ rel_cert ]
+certID=issuer='CN=Root CA; Related Certificate Test, C=US, ST=MD, L=Annapolis Junction, O=CCSS, OU=C54', serial=41:DA:56:57:90:21:E9:DA:47:28:2C:89:70:5F:B6:49:0E:F2:8E:56
+requestTime=1692723379
+locationInfo=accessMethod = id-ad-relatedCerts, accessLocation = 127.0.0.1:8000/rsa4096_chain.p7b
+signature=75:8e:a0:15:a9:6f:63:7f:fb:c7:fd:81:9a:88:36:92:9b:03:e9:e5:46:62:04:ff:47:41:70:77:25:ab:e7:cb:f8:d3:5e:20:38:04:8b:b3:9a:cd:bf:18:6b:e6:e6:b5:dd:16:7b:61:32:6a:08:0e:16:5b:b6:a4:18:61:49:5c:5b:6b:89:a9:ab:8c:21:ca:18:76:9a:ef:1d:11:e2:e2:ef:31:00:02:be:56:50:9e:53:cc:22:be:69:46:a9:e1:35:d9:8f:9c:c9:b6:a3:14:89:a2:60:8e:21:67:82:85:ba:72:d3:2f:4e:4d:a5:fb:66:b2:3b:7c:c2:40:bf:39:5a:26:da:d6:ae:31:a4:04:e7:47:e2:33:d7:10:c1:52:69:10:88:c3:87:5b:47:04:1d:43:e1:ff:63:b1:27:e7:37:fe:d1:b2:67:5b:9e:15:f2:46:0c:19:87:05:83:14:54:fd:9c:d3:1e:ee:a8:99:c4:d4:21:75:ff:03:1d:d6:87:0e:4d:b9:53:b6:e3:45:a1:7d:d1:f4:26:8b:81:89:ee:dd:ec:b1:80:1c:b8:96:26:20:d2:2c:2e:3a:22:ab:ec:d0:ad:d6:71:32:ca:b3:03:06:8a:6f:92:4f:56:58:41:67:c4:08:4d:12:c8:5f:59:d9:54:b8:b5:db:e6:84:22:1d:68:35:fe:db:63:2b:1e:25:06:79:d2:ee:f6:e0:8f:35:a7:7a:81:01:2f:01:e7:9b:d7:a0:09:a1:7a:b2:68:c4:7b:56:3d:b9:3c:fa:50:aa:0b:72:ad:43:57:fc:e7:56:5b:07:cb:7a:f7:99:77:62:d6:80:e7:df:e4:f7:c8:46:d2:80:f0:a1:12:92:f4:3f:65:90:b7:10:08:90:27:d2:77:e3:04:31:a7:a7:0b:52:95:54:63:d0:7c:c8:48:8e:29:6f:f4:a5:ce:73:28:a1:da:ff:17:4f:8d:1f:a9:90:66:b2:f4:ae:91:ce:ac:76:f5:9f:e8:3a:63:fc:fb:ef:74:66:e9:34:ed:88:87:29:e4:8d:d7:09:75:8a:60:02:13:42:2c:7d:6b:3c:49:20:38:d7:09:ab:5a:e9:c8:5c:26:44:7e:b8:5a:c3:ab:67:1e:5b:73:0f:cc:77:fb:a9:b3:e1:16:ee:2a:fb:d1:c4:27:fe:f8:6d:30:e9:cf:04:41:8e:59:e5:0d:cc:b3:a0:fc:d2:5e:70:83:84:0b:de:c7:e3:86:93:f8:d6:6d:15:09:f5:73:3b:32:79:fe:49:46:52:4d:4a:f5:e4:b1:49:37:cd:99:6d:9d:26:1f:ba:b9:bf:f1:36:74:2b:c8:d2:f5:00:e1:ee:97:f8
+

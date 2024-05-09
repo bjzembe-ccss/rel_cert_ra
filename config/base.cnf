@@ -1,0 +1,19 @@
+[ req ]
+distinguished_name=dname
+req_extensions=req_ext
+prompt=no
+
+[ dname ]
+commonName=Related Certificate Test
+countryName=US
+stateOrProvinceName=MD
+localityName=Annapolis Junction
+organizationName=CCSS
+organizationalUnitName=C54
+
+[ req_ext ]
+basicConstraints=CA:FALSE
+keyUsage=digitalSignature, nonRepudiation
+extendedKeyUsage=serverAuth, clientAuth
+subjectKeyIdentifier=hash
+

@@ -1,0 +1,2 @@
+# starts a server in the 'certs' directory to enable a ca to pull previously issued certs via ftp
+python3 -m pyftpdlib -d certs/ -p 8000 -V

@@ -1,0 +1,32 @@
+asn1=SEQUENCE:signature_cnf
+
+[signature_cnf]
+requestTime=BinaryTime:1688092536
+certID=IssuerAndSerialNumber:iss_and_ser_cnf
+
+[iss_and_ser_cnf]
+issuer=Name:CN = "Root CA; Related Certificate Test", C = US, ST = MD, L = Annapolis Junction O = CCSS, OU = C54, emailAddress = bjzembe@uwe.nsa.gov
+serialNumber=CertificateSerialNumber:41DA56579021E9DA47282C89705FB6490EF28E53 
+
+BinaryTime = INTEGER(0..MAX)
+
+IssuerAndSerialNumber = SEQUENCE {
+  issuer=Name,
+  serialNumber=CertificateSerialNumber }
+
+Name = CHOICE {
+  rdnSequence=RDNSequence }
+
+RDNSequence = SEQUENCE OF relativeDistinguishedName
+
+RelativeDistinguishedName = SET SIZE(1..MAX) OF AttributeTypeAndValue
+
+AttributeTypeAndValue = SEQUENCE {
+  type=AttributeType,
+  value=AttributeValue }
+
+AttributeType = OBJECT IDENTIFIER
+AttributeValue = ANY
+
+CertificateSerialNumber = INTEGER
+

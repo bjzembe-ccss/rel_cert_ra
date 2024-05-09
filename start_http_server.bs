@@ -1,0 +1,2 @@
+# starts a server in the 'certs' directory to enable a ca to pull previously issued certs via http
+python3 -m http.server -d certs/ 8000
